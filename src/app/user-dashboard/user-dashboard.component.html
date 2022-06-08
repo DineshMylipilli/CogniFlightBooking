@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="row"><br><br></div>
+    <div class="container-fluid">
+        <h1 style="color: aliceblue; margin-left: 10px;" class="navbar-brand">User Dashboard</h1>
+        <div class="d-flex">
+            <button routerLink="/cancel" class="btn btn-primary mx-3">Cancel Ticket</button>
+            <button routerLink="/history" class="btn btn-primary mx-3">Booking History</button>
+            <button routerLink="/search" class="btn btn-primary mx-3">Flight Search</button>
+            <button routerLink="/bookticket" class="btn btn-primary mx-3">Book My ticket</button>
+            <button (click)="Logout()" class="btn btn-danger mx-3">Log Out</button>
+        </div>
+    </div>
+</nav>

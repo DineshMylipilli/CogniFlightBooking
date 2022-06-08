@@ -1,0 +1,52 @@
+<app-home-dashboard></app-home-dashboard>
+<form [formGroup]="registerForm"> 
+    <div class="row d-flex justify-content-center" style="text-align: center;"> 
+        <h4>Register yourself by filling below details!</h4><div><br></div>
+        <div class="col-sm-4">
+            <b>Username :</b>
+            <input type="text" formControlName="UserName" class="form-control" placeholder="Enter User Name" />
+        </div><div class="row"></div>
+
+        <div class="col-sm-4 mt-3">
+            <b>Email Id :</b>
+            <input type="email" formControlName="Email" class="form-control " placeholder="Enter Email Id" />
+        </div><div class="row"></div>
+
+        <div class="col-sm-4 mt-3">
+            <b>Password :</b>
+            <input type="password" formControlName="Password" class="form-control " placeholder="Enter password" />
+        </div><div class="row"></div>
+
+        <div class="col-sm-4 mt-3">
+            <b>Mobile :</b>
+            <input type="number" formControlName="ContactNo" class="form-control " placeholder="Enter Mobile number" />
+        </div><div class="row"></div>
+
+        <div class="col-sm-4 mt-3">
+            <b>Gender :</b>
+            <select  formControlName="Gender" class="form-select" >
+                <option value=''>Select your Gender</option>  
+                <option value='Male'>Male</option>                            
+                <option value='Female'>Female</option>                                                      
+            </select> 
+        </div><div class="row"></div>
+
+        <div class="col-sm-4">
+            <b>Age :</b>
+            <input type="number" formControlName="Age" class="form-control " placeholder="Enter Age" />
+        </div><div class="row"></div>
+
+        <div class="col-sm-4 mt-3">
+            <b>Address :</b>
+            <input type="text" formControlName="Address" class="form-control " placeholder="Enter Address" />
+        </div><div class="row"></div>  
+                  
+        <div class="col-sm-4"><br>
+            <button type="submit" (click)="registerUser(registerForm.value)" [disabled]="!registerForm.valid" class="btn btn-primary mt-3">Sign Up</button>
+        </div>      
+    </div> 
+</form>                
+<a routerLink='/login' style="float:right;">Alreay Have account? Click to Login!</a>
+            
+
+        

@@ -1,0 +1,11 @@
+<app-user-dashboard></app-user-dashboard>
+<form [formGroup]="CancelForm">
+<h2 class="row d-flex justify-content-center" style="margin-top: 20px;">Cancel Ticket</h2> <br>
+<div class="col-sm-4 offset-4 d-flex justify-content-center" ><b>Enter PNR:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" formControlName="pnr" placeholder="Enter PNR Number of ticket" class="form-control"/>
+</div><div ><br></div>
+
+<div class="col-sm-12" style="text-align: center;margin-top: 10px;"><br>
+    <button type="button" (click)="cancelTicket(CancelForm.value)" class="btn btn-primary mx-3">Search</button>
+</div>
+</form>

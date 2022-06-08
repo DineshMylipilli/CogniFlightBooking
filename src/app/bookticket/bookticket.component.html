@@ -1,0 +1,112 @@
+<app-user-dashboard></app-user-dashboard>
+
+<form [formGroup]="bookticketForm">
+<div class="row d-flex justify-content-center">
+    
+    <div class="col-sm-6 mt-3">
+        <div class="row" style="background-color:white;padding:10px; text-align: center;">
+            <div class="col-sm-12"><h1>Ticket Booking</h1></div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px;">
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Airline Id</b></div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="AirlineId" class="form-control" placeholder="Enter AirlineId" />
+            </div><div class="col-sm-1"></div>
+        </div>
+
+        <!-- <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Boarding Date</b></div>
+            <div class="col-sm-6">
+                <input type="datetime-local" formControlName="BoardingTime" class="form-control"/>
+            </div><div class="col-sm-1"></div>
+        </div> -->
+
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div><div class="col-sm-3"><b> User Name</b></div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="UserName" class="form-control" placeholder="Enter UserName" />
+            </div><div class="col-sm-1"></div>
+        </div>
+                
+        <!-- <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Email</b></div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="EmailId" class="form-control" placeholder="Enter Email Id" />
+            </div><div class="col-sm-1"></div>
+        </div> -->
+
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Passenger Name</b></div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="Name" class="form-control" placeholder="Enter Name" />
+            </div><div class="col-sm-1"></div>
+        </div>
+
+        <div class="row" >
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Passenger Gender</b></div>
+            <div class="col-sm-6">
+            <select  formControlName="Gender" class="form-select" >
+                <option value=''>Select your Gender</option>  
+                <option value='Male'>Male</option>                            
+                <option value='Female'>Female</option>                                                      
+            </select> 
+            </div><div class="col-sm-1"></div>
+        </div>
+
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Passenger Age</b></div>
+            <div class="col-sm-6">
+                <input type="number" formControlName="Age" class="form-control" placeholder="Enter Age" />
+            </div><div class="col-sm-1"></div>
+        </div>
+
+        <!-- <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Source</b></div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="Source" class="form-control" placeholder="Enter Source" />
+            </div><div class="col-sm-1"></div>
+        </div>
+
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Destination</b></div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="Destination" class="form-control" placeholder="Enter Destination" />
+            </div><div class="col-sm-1"></div>
+        </div> -->
+
+        <div class="row" >
+            <div class="col-sm-1"></div><div class="col-sm-3"><b>Select Meal Tpe</b></div>
+            <div class="col-sm-6">
+            <select  formControlName="MealTpe" class="form-select" >
+                <option value=0>None</option>  
+                <option value=1>Veg</option>                            
+                <option value=2>Non-Veg</option>                                                      
+            </select> 
+            </div><div class="col-sm-1"></div>
+        </div>
+
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3"><b>Seat Numbers</b></div>
+            <div class="col-sm-6">
+                    <input type="text" formControlName="SeatNumbers" class="form-control" placeholder="Enter SeatNumbers" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="row" style="margin:20px 100px;">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                    <input type="button" (click)="BookTicket(bookticketForm.value)" value="Book Ticket" class="btn btn-success" />
+                </div>
+                <!-- <div class="col-sm-3">
+                    <input type="button"  id="btnCancel" value="Cancel" class="btn-danger" />
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+</form>
